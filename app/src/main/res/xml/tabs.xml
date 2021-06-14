@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        drawable="@drawable/home"
+        text="@strings/home" />
+
+    <tab
+        drawable="@drawable/search"
+        text="@strings/search"/>
+
+    <tab
+        drawable="@drawable/cart"
+        text="@strings/cart" />
+
+    <tab
+        drawable="@drawable/settings"
+        text="@strings/settings" />
+
+
+</tabs>
