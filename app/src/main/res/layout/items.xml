@@ -50,22 +50,23 @@
                         android:layout_height="wrap_content"
                         android:text="Source"
                         android:layout_marginLeft="10dp"
+                        android:padding="10dp"
                         android:ems="15"
                         android:textSize="16dp"
                         android:fontFamily="@font/g_light"
                         android:textColor="@color/white"
                         android:id="@+id/author"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Date"
-                        android:gravity="right"
-                        android:padding="10dp"
-                        android:textSize="16dp"
-                        android:fontFamily="@font/g_light"
-                        android:textColor="@color/white"
-                        android:id="@+id/tvDate"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Date"-->
+<!--                        android:gravity="right"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:textSize="16dp"-->
+<!--                        android:fontFamily="@font/g_light"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:id="@+id/tvDate"/>-->
 
                 </LinearLayout>
 
