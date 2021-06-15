@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:fontFamily="@font/g_bold"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="NEWS"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:columnCount="2"
+        android:background="@drawable/black_background"
+        android:rowCount="2">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Search"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:padding="10dp"
+            android:background="@drawable/black_background"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:drawableRight="@drawable/ic_baseline_youtube_searched_for_24"
+            android:inputType="textPersonName" />
+<!--        android:drawableRight="@drawable/search"-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_row="0"-->
+        <!--            android:layout_column="1"-->
+        <!--            android:background="@color/black"-->
+        <!--            android:drawableRight="@drawable/Search"-->
+        <!--            android:paddingRight="20dp" />-->
+    </GridLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/newsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" />
+
+
+
+
+</LinearLayout>

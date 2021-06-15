@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment implements NewsItemClicked{
 
 
 //            setContentView(R.layout.activity_main);
-            View v = inflater.inflate(R.layout.fragment_home,container,false);
+            View v = inflater.inflate(R.layout.news_test,container,false);
             RecyclerView newsList = v.findViewById(R.id.newsList);
             layoutManager = new LinearLayoutManager(getActivity());
             layoutManager.setOrientation(RecyclerView.VERTICAL);
