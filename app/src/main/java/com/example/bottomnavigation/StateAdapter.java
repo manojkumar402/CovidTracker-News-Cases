@@ -20,7 +20,7 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.StateRVViewH
     @NonNull
     @Override
     public StateRVViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_view,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cases_list,parent,false);
         return new StateRVViewHolder(view);
     }
 

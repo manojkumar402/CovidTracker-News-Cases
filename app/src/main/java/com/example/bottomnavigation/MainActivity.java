@@ -1,16 +1,11 @@
 package com.example.bottomnavigation;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.bottomnavigation.databinding.ActivityMainBinding;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import me.ibrahimsn.lib.OnItemSelectedListener;
 
@@ -41,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                         transaction.replace(R.id.fragment_container,new HomeFragment() );
                         break;
                     case 1:
-                        transaction.replace(R.id.fragment_container,new CartFragment());
+                        transaction.replace(R.id.fragment_container,new CasesFragment());
                         break;
                         case 2:
                             transaction.replace(R.id.fragment_container,new SearchFragment());
