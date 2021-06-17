@@ -42,7 +42,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     public void onBindViewHolder(NewsViewHolder holder, int position) {
         News title = items.get(position);
         holder.textTitle.setText(title.getmTitle());
-        holder.author.setText(title.getmAuthor());
+        if(title.getmAuthor()=="null"){
+            holder.author.setText(" ");
+        }
+        else {
+            holder.author.setText(title.getmAuthor());
+        }
         Glide.with(holder.itemView.getContext()).load(title.getmImageurl()).into(holder.imageView);
 
 
