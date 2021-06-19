@@ -11,7 +11,7 @@
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="310dp"
-        android:background="@color/grey"
+        android:background="@drawable/home_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,14 +70,14 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
                     android:fontFamily="@font/regular"
-                    android:text="New Cases"
+                    android:text="Total Active Cases"
                     android:textColor="#1E2432"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView4"
                     app:layout_constraintStart_toEndOf="@+id/imageView4"
                     app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/postiveCases"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -90,25 +90,26 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/positiveIncrement"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:text="People"
-                    android:textSize="10sp"
-                    app:layout_constraintStart_toStartOf="@+id/textView10"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    android:layout_marginTop="4dp"
+                    android:text="TextView"
+                    app:layout_constraintStart_toStartOf="@+id/postiveCases"
+                    app:layout_constraintTop_toBottomOf="@+id/postiveCases" />
+
 
                 <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="67dp"
-                    android:layout_height="28dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/mainline" />
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="6dp"
+                    tools:src="@drawable/ic_up"
+                    app:layout_constraintStart_toEndOf="@+id/positiveIncrement"
+                    app:layout_constraintTop_toBottomOf="@+id/postiveCases" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -130,16 +131,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:text="People"
-                    android:textSize="10sp"
-                    app:layout_constraintStart_toStartOf="@+id/recoveredCases"
-                    app:layout_constraintTop_toBottomOf="@+id/recoveredCases" />
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -178,16 +169,25 @@
                     app:layout_constraintStart_toStartOf="@+id/imageView5"
                     app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
+                <TextView
+                    android:id="@+id/RecoveredIncrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="TextView"
+                    app:layout_constraintStart_toStartOf="@+id/recoveredCases"
+                    app:layout_constraintTop_toBottomOf="@+id/recoveredCases" />
+
                 <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="67dp"
-                    android:layout_height="28dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/mainline" />
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="6dp"
+                    tools:src="@drawable/ic_up"
+                    app:layout_constraintStart_toEndOf="@+id/RecoveredIncrement"
+                    app:layout_constraintTop_toBottomOf="@+id/recoveredCases" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -208,14 +208,14 @@
                 android:layout_height="match_parent">
 
 
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:text="People"
-                    android:textSize="10sp"
-                    app:layout_constraintStart_toStartOf="@+id/deathCases"
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_up"
+                    app:layout_constraintStart_toEndOf="@+id/deathIncrement"
                     app:layout_constraintTop_toBottomOf="@+id/deathCases" />
 
                 <ImageView
@@ -255,16 +255,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView3"
                     tools:text="890" />
 
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="67dp"
-                    android:layout_height="28dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/mainline" />
+                <TextView
+                    android:id="@+id/deathIncrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="TextView"
+                    app:layout_constraintStart_toStartOf="@+id/deathCases"
+                    app:layout_constraintTop_toBottomOf="@+id/deathCases" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -286,34 +286,13 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:text="People"
-                    android:textSize="10sp"
-                    app:layout_constraintStart_toStartOf="@+id/totalCases"
-                    app:layout_constraintTop_toBottomOf="@+id/totalCases" />
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="67dp"
-                    android:layout_height="28dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:src="@drawable/mainline"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-
-                <TextView
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
                     android:fontFamily="@font/regular"
-                    android:text="Confirmed Cases"
+                    android:text="Total Positive Cases"
                     android:textColor="#1E2432"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView2"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -337,12 +316,31 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/bold"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="@+id/imageView2"
                     app:layout_constraintTop_toBottomOf="@+id/imageView2"
                     tools:text="23432" />
+
+                <TextView
+                    android:id="@+id/totalIncrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    tools:text="99032"
+                    app:layout_constraintStart_toStartOf="@+id/totalCases"
+                    app:layout_constraintTop_toBottomOf="@+id/totalCases" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_up"
+                    app:layout_constraintStart_toEndOf="@+id/totalIncrement"
+                    app:layout_constraintTop_toBottomOf="@+id/totalCases" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -357,7 +355,7 @@
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
         app:layout_constraintVertical_bias="1.0" />

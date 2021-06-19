@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        if(getSupportActionBar() != null){
+            getSupportActionBar().hide();
+        }
 //        by default in home it shows fragmnet
         FragmentTransaction homeTrans = getSupportFragmentManager().beginTransaction();
         homeTrans.replace(R.id.fragment_container,new HomeFragment());

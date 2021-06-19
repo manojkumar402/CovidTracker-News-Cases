@@ -48,7 +48,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total Cases"
+                    android:text="Active Cases"
                     android:padding="2dp"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
@@ -61,6 +61,15 @@
                     android:layout_gravity="center"
                     android:textColor="@color/green"
                     tools:text="D87879" />
+                <TextView
+                    android:id="@+id/incrInPositive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:drawableRight="@drawable/ic_up_16"
+                    tools:text="100"/>
 
             </LinearLayout>
 
@@ -77,6 +86,7 @@
                         android:text="Recovered"
                         android:padding="2dp"
                         android:layout_gravity="center"
+
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -88,6 +98,15 @@
                         android:padding="2dp"
                         android:textColor="@color/green"
                         tools:text="D87879" />
+                    <TextView
+                        android:id="@+id/incrInRecovered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:drawableRight="@drawable/ic_up_16"
+                        tools:text="100"/>
 
                 </LinearLayout>
 
@@ -114,6 +133,15 @@
                         android:padding="2dp"
                         android:textColor="@color/red"
                         tools:text="7879" />
+                    <TextView
+                        android:id="@+id/incrInDeath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_gravity="center"
+                        android:drawableRight="@drawable/ic_up_16"
+                        android:layout_marginBottom="4dp"
+                        tools:text="100"/>
 
                 </LinearLayout>
 

@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <TextView
+        android:id="@+id/topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:fontFamily="@font/g_bold"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="VACCINE TRACKER AND NOTIFIER"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/idEdtPinCode"
@@ -14,6 +31,7 @@
         android:layout_margin="5dp"
         android:layout_toStartOf="@id/idBtnSearch"
         android:layout_toLeftOf="@id/idBtnSearch"
+        android:layout_below="@+id/topic"
         android:hint="Enter PinCode"
         android:inputType="number" />
 
@@ -24,6 +42,7 @@
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_below="@+id/topic"
         android:layout_margin="5dp"
         android:text="Search"
         android:textAllCaps="false" />

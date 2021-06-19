@@ -1,16 +1,23 @@
 package com.example.bottomnavigation;
 
-public class StateModel implements Comparable<StateModel> {
+public class StateModel{
     private String mStateName;
-    private int mRecovered;
-    private int mDeaths;
-    private int mCases;
+    private String mRecovered;
+    private String mDeaths;
+    private String mCases;
+    private int mIncreTot;
+    private int mIncreDeath;
+    private int mIncreRecoverd;
 
-    StateModel(String stateName, int NumRecovered, int NumDeaths, int NumCases){
+
+    StateModel(String stateName, String  NumRecovered, String NumDeaths, String NumCases, int incrmentRec, int incrementDeath, int incrementTot){
         this.mStateName = stateName;
         this.mRecovered = NumRecovered;
         this.mDeaths = NumDeaths;
         this.mCases = NumCases;
+        this.mIncreTot = incrementTot;
+        this.mIncreRecoverd = incrmentRec;
+        this.mIncreDeath = incrementDeath;
     }
 
 
@@ -19,23 +26,30 @@ public class StateModel implements Comparable<StateModel> {
         return mStateName;
     }
 
-    public int getmRecovered() {
+    public String getmRecovered() {
         return mRecovered;
     }
 
-    public int getmDeaths() {
+    public String getmDeaths() {
         return mDeaths;
     }
 
-    public int getmCases() {
+    public String getmCases() {
         return mCases;
     }
 
-
-    @Override
-    public int compareTo(StateModel state) {
-        return state.getmCases() - this.mCases;
+    public int getmIncreTot() {
+        return mIncreTot;
     }
+
+    public int getmIncreDeath() {
+        return mIncreDeath;
+    }
+
+    public int getmIncreRecoverd() {
+        return mIncreRecoverd;
+    }
+
 
 
 }
