@@ -1,5 +1,7 @@
 package com.example.bottomnavigation;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -122,20 +126,15 @@ public class CasesFragment extends Fragment {
                     int c2 = Integer.parseInt(IndiaDCases) - Integer.parseInt(INCdCases);
                     int c3 = Integer.parseInt(IndiaPCases) - Integer.parseInt(INCpCases);
                     Toast.makeText(getContext(), "C3 is "+c3, Toast.LENGTH_SHORT).show();
-                    if(c3<0){
-                        //c3 = c3 - (2*c3);
-                        Drawable d = getContext().getResources().getDrawable(R.drawable.ic_down);
-                        ChangePositiveCases.setCompoundDrawables(null,d,null,null);
-                    }else{
-                        Drawable d = getContext().getResources().getDrawable(R.drawable.ic_up);
-                        ChangePositiveCases.setCompoundDrawables(null,d,null,null);
 
-                    }
-
-                    ChangeTotCases.setText(String.valueOf(c));
-                    ChangeRecCases.setText(String.valueOf(c1));
-                    ChangeDetCases.setText(String.valueOf(c2));
-                    ChangePositiveCases.setText(String.valueOf(c3));
+                    CheckIncrement(c,ChangeTotCases);
+                    CheckIncrement(c1,ChangeRecCases);
+                    CheckIncrement(c2,ChangeDetCases);
+                    CheckIncrement(c3,ChangePositiveCases);
+//                    ChangeTotCases.setText(String.valueOf(c));
+//                    ChangeRecCases.setText(String.valueOf(c1));
+//                    ChangeDetCases.setText(String.valueOf(c2));
+//                    ChangePositiveCases.setText(String.valueOf(c3));
                     wwTCases.setText(IndiaTCases);
                     wwRCases.setText(IndiaRCases);
                     wwDCases.setText(IndiaDCases);
@@ -167,6 +166,20 @@ public class CasesFragment extends Fragment {
 
                 } catch (JSONException e) {
                     e.printStackTrace();
+                }
+            }
+
+            @SuppressLint("ResourceAsColor")
+            private void CheckIncrement(int val, TextView txtView) {
+                if(val<0){
+                    val = val - (2*val);
+                    txtView.setText(String.valueOf(val));
+                    //DrawableCompat.setTint(ContextCompat.getDrawable(getContext(),R.drawable.ic_up),);
+                    txtView.setCompoundDrawablesWithIntrinsicBounds(null,null, ContextCompat.getDrawable(getContext(),R.drawable.ic_down),null);
+                }else{
+                    txtView.setText(String.valueOf(val));
+                    //DrawableCompat.setTint(ContextCompat.getDrawable(getContext(),R.drawable.ic_up),R.color.red);
+                    txtView.setCompoundDrawablesWithIntrinsicBounds(null,null, ContextCompat.getDrawable(getContext(),R.drawable.ic_up),null);
                 }
             }
 

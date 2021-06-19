@@ -14,7 +14,7 @@
         android:fontFamily="@font/g_bold"
         android:gravity="center_horizontal"
         android:padding="10dp"
-        android:text="VACCINE TRACKER AND NOTIFIER"
+        android:text="VACCINE TRACKER &amp; NOTIFIER"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"

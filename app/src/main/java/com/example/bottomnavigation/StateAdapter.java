@@ -1,11 +1,13 @@
 package com.example.bottomnavigation;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -16,10 +18,11 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.StateRVViewH
     public StateAdapter(List<StateModel> stateList){
         this.stateList = stateList;
     }
-
+    Context context;
     @NonNull
     @Override
     public StateRVViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        this.context = parent.getContext();
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cases_list,parent,false);
         return new StateRVViewHolder(view);
     }
@@ -33,9 +36,30 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.StateRVViewH
         holder.deathsTV.setText(String.valueOf(stateDate.getmDeaths()));
         holder.recoveredTV.setText(String.valueOf(stateDate.getmRecovered()));
         holder.casesTV.setText(String.valueOf(stateDate.getmCases()));
-        holder.IncrementCasesTV.setText(String.valueOf(stateDate.getmIncreTot()));
-        holder.IncrementDeathTV.setText(String.valueOf(stateDate.getmIncreDeath()));
-        holder.IncrementRecoveredTV.setText(String.valueOf(stateDate.getmIncreRecoverd()));
+        CheckIncrement(stateDate.getmIncreTot(), holder.IncrementCasesTV);
+        CheckIncrement(stateDate.getmIncreDeath(),holder.IncrementDeathTV);
+        CheckIncrement(stateDate.getmIncreRecoverd(),holder.IncrementRecoveredTV);
+        //holder.IncrementCasesTV.setText(String.valueOf(stateDate.getmIncreTot()));
+//        holder.IncrementDeathTV.setText(String.valueOf(stateDate.getmIncreDeath()));
+//        holder.IncrementRecoveredTV.setText(String.valueOf(stateDate.getmIncreRecoverd()));
+
+    }
+
+    private void CheckIncrement(int val,TextView txtView) {
+        if(val == 0){
+            txtView.setText(String.valueOf(val));
+            txtView.setCompoundDrawablesWithIntrinsicBounds(null,null, null,null);
+
+        }
+        else if(val<0){
+            val = val - (2*val);
+            txtView.setText(String.valueOf(val));
+
+            txtView.setCompoundDrawablesWithIntrinsicBounds(null,null, ContextCompat.getDrawable(context,R.drawable.ic_down),null);
+        }else{
+            txtView.setText(String.valueOf(val));
+            txtView.setCompoundDrawablesWithIntrinsicBounds(null,null, ContextCompat.getDrawable(context,R.drawable.ic_up),null);
+        }
 
     }
 
